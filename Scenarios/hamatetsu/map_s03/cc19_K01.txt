@@ -1,0 +1,142 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// 51245 - 51535  map_s03/cc19_K1
+// 身延線 下部温泉(CC19) 場 ～ 下本出
+//////////////////////////////////////////////////////////////////////////
+
+// ※駅中心　51K390
+$Shimobe + 0;
+	Beacon.Put(80, 1, 51390);
+
+
+$Shimobe - 641;
+;// ■■□ (下本場内　遠方)
+	Structure['PoleSL1'].Put(0, -2.6, -1.0, 0, 0, 0, 0, 1, 1.0);
+	Signal['type6'].Put(0, 0, -2.4, 2.8, -0.2, 0, 0, 0, 1, 1.0);
+
+$Shimobe - 260;
+;//●●○ 下本場内
+	Section.BeginNew(0, 2, 4);
+	Structure['PoleSR1'].Put(0, 2.6, -2.0, 0, 0, 0, 0, 1, 1.0);
+	Signal['type3'].Put(0, 0, 2.4, 2.8, 0, 0, 0, 0, 1, 1.0);
+$Shimobe - 260;
+		$dist = distance;
+		$Section2=3996;
+		$LastBcn=600;
+	include 'utility\Beacon60st.txt';
+		$LastPut=3200;
+		$LastBcn=3996;
+	include 'utility\Beacon60plus.txt';
+
+$Shimobe - 140;
+	Repeater['EnePole00'].End();
+
+$Shimobe - 140;
+	Track['01'].Position(0, 0, -162, 0); // 下１
+	Repeater['Rail01L'].Begin('01', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail01R'].Begin('01',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail01u'].Begin('01', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	JointNoise.Play(0);
+
+$Shimobe - 115;
+	Track['01'].Position(-1.90, 0, 162, 0); // 下１
+	Track['10'].Position( 0.00, 0, 162, 0); // 上本
+	Repeater['Rail10L'].Begin('10', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail10R'].Begin('10',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail10u'].Begin('10', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Kasen10'].Begin('10', 0, 0, 0, 0, 0, 0, 1, 25, 25, 'KasenS0');
+	JointNoise.Play(0);
+
+$Shimobe - 90;
+	Track['01'].Position(-3.80, 0, 0, 0); // 下１
+	Track['10'].Position( 1.90, 0, 0, 0); // 上本
+
+$Shimobe - 40;
+	Track['10'].Position( 9.50, 0, -162, 0); // 上本
+
+$Shimobe - 25;
+	Track['10'].Position(11.40, 0, 0, 0); // 上本
+	Repeater['Rail01L'].End();
+	Repeater['Rail01R'].End();
+	Repeater['Rail01u'].End();
+
+$Shimobe - 20;
+//◎ 下部踏切　51.370
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$Shimobe - 15;
+	Repeater['Rail01L'].Begin('01', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail01R'].Begin('01',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail01u'].Begin('01', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Kasen01'].Begin('01', 0, 0, 0, 0, 0, 0, 1, 25, 25, 'KasenS0');
+
+//▼▼▼ 下部温泉 (CC19)
+$Shimobe - 15;
+	Repeater['Form00S'].Begin0(0, 1, 5.0, 5.0, 'FormR2');
+	Repeater['Form00C'].Begin0(0, 1, 5.0, 5.0, 'FormCR2');
+
+$Shimobe - 10;
+	Repeater['Form10S'].Begin0('10', 1, 5.0, 5.0, 'FormL2');
+	Repeater['Form10C'].Begin0('10', 1, 5.0, 5.0, 'FormCL2');
+
+$Shimobe + 30;
+	Track['10'].Position(11.40, 0, -162, 0); // 上本
+
+$Shimobe + 55;
+	Track['10'].Position(9.50, 0, 0, 0); // 上本
+
+$Shimobe + 75;
+	Repeater['Form00S'].End();
+	Repeater['Form10S'].End();
+	Repeater['Form00C'].End();
+	Repeater['Form10C'].End();
+//▲▲▲ 下部温泉 (CC19)
+
+$Shimobe + 77;
+;//●●○ 下本出発
+	Section.BeginNew(0, 2, 4);
+	Structure['PoleSL1'].Put(0, -2.2, -1.0, 0, 0, 0, 0, 1, 1.0);
+	Signal['type3'].Put(0, 0, -2.0, 3.8, 0, 0, 0, 0, 1, 1.0);
+;//●●○ 上本出発
+	Structure['PoleSL1'].Put(0, 2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, 2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+$Shimobe + 77;
+		$dist = distance;
+		$Section2=636;
+		$LastBcn=180;
+	include 'utility\Beacon60st.txt';
+
+$Shimobe + 105;
+	Curve.Begin(-162);
+	Track['01'].Position(-3.80, 0, 162, 0); // 下１
+	Track['10'].Position( 1.90, 0, 162, 0); // 上本
+
+$Shimobe + 120;
+	Curve.Begin(-300);
+	Track['01'].Position(-1.90, 0, -162, 0); // 下１
+	Track['10'].Position( 0.00, 0,    0, 0); // 上本
+	Repeater['Rail10L'].End();
+	Repeater['Rail10R'].End();
+	Repeater['Rail10u'].End();
+	Repeater['Kasen10'].End();
+
+$Shimobe + 145;
+	Track['01'].Position(0.00, 0, 0, 0); // 下１
+	Repeater['Rail01L'].End();
+	Repeater['Rail01R'].End();
+	Repeater['Rail01u'].End();
+	Repeater['Kasen01'].End();
+
+
+
+
+
+
+//--------------------------------------------------------------------------
+
+
+
+// (C)Harupi

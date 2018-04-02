@@ -1,0 +1,8 @@
+﻿Bvets Scenario 1.00
+Title = 身延線下り普通
+Author = ハルピー
+Route = 2-Hamatetsu\S03_K1.txt
+RouteTitle = しぞーか本線
+Vehicle = 
+VehicleTitle = 車両を指定してください
+Comment = ATS-PT

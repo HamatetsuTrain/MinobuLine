@@ -1,0 +1,32 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// utility/River
+// 川
+//////////////////////////////////////////////////////////////////////////
+
+// 引数 //////
+// ($location : 川の開始点[m])
+// $riverlen : 川の長さ[m]
+/////////////
+
+//$location = distance;
+$location = $dist;
+
+$location-25;
+	Repeater['Ground'].Begin('Height',  0, 0, 0.01, 0, 0, 0, 1, 25, 25, 'Grass');
+
+$location+0;
+	Repeater['Ground'].Begin('Height',  0, 0, 0, 0, 0, 0, 1, 25, 25, 'River');
+
+$location+$riverlen-25;
+	Repeater['Ground'].Begin('Height',  0, 0, 0, 0, 0, 0, 1, 25, 25, 'Levee');
+
+$location+$riverlen;
+	Structure['Grass'].Put('Height',  0, 0, -0.01, 0, 0, 0, 1, 25);
+
+$location+$riverlen- (($location+$riverlen)%25) +25;
+	Repeater['Ground'].Begin('Height',  0, 0, 0, 0, 0, 0, 1, 25, 25, 'Grass');
+
+
+////////////////////////////////////////////////////////////////

@@ -1,0 +1,66 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// utility/Beacon60s
+// ATS-PT TS/TR/TL地上子 (閉塞)
+//////////////////////////////////////////////////////////////////////////
+
+// 引数 //////
+// ($location : 制限開始点[m])
+// $Section2 : 次閉塞～次々閉塞境界までの距離　(B)[m]
+// $LastBcn : TL地上子との距離[m]
+/////////////
+// →[設置点]→$SecB→[閉塞境界]→($Section2)$SecA→[閉塞境界]
+// $SecB : B[m]
+// $SecA : A[m]
+
+//$location = distance;
+$location = $dist;
+
+$SecB = $SecA;
+$SecA = ($Section2 % 4000);
+
+// [TL]
+//$Option = floor(($LastBcn % 4000) / 4) * 1000000 + floor($SecB / 4) * 1000 + floor($SecA / 4);
+$Option = floor($SecB / 4) * 1000 + floor($SecA / 4);
+
+$location - ($LastBcn % 4000);
+	Beacon.Put(60, 1, $Option);
+	Structure['Beacon_p'].Put(0, 0, 0, 0, 0, 0, 0, 3, 0);
+
+
+// [TR]
+//$Option = 45000000 + floor($SecB / 4) * 1000 + floor($SecA / 4);
+
+$location - 180;
+	Beacon.Put(60, 1, $Option);
+	Structure['Beacon_p'].Put(0, 0, 0, 0, 0, 0, 0, 3, 0);
+
+
+// [TS]
+//$Option = 5000000 + floor($SecB / 4) * 1000 + floor($SecA / 4);
+
+$location - 20;
+	Beacon.Put(60, 1, $Option);
+	Structure['Beacon_p'].Put(0, 0, 0, 0, 0, 0, 0, 3, 0);
+
+// [ST]
+$location - 17;
+	Beacon.Put(1, 1, 0);
+	Structure['Beacon_p'].Put(0, -0.3, 0, 0, 0, 0, 0, 3, 0);
+
+////////////////////////////////////////////////////////////////
+
+// $LastBcn=600, $SecB=372, $SecA=3996の場合に
+// [TL] $Option=150,093,984		(期待値 150,093,999)
+// [TR] $Option= 45,094,000		(期待値  45,093,999)
+// [TS] $Option=  5,093,999		(期待値   5,093,999)
+//になってしまう
+//
+// ※$LastBcn=3996, $SecB=372, $SecA=3996の場合は
+// [TL] $Option=999,094,016		(期待値 999,093,999)
+//
+
+
+
+

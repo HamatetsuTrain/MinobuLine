@@ -1,0 +1,129 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// 38646 - 39592  map_s03/cc15_K1
+// 身延線 甲斐大島(CC15) 場 ～ 下本出
+//////////////////////////////////////////////////////////////////////////
+
+// ※駅中心　39K390
+$Oshima + 0;
+	Beacon.Put(80, 1, 39390);
+
+
+$Oshima - 744;
+;//■■□ 下本場内遠方
+	Structure['PoleSL1'].Put(0, -2.6, -1.0, 0, 0, 0, 0, 1, 1.0);
+	Signal['type6'].Put(0, 0, -2.4, 2.8, -0.3, 0, 0, 0, 1, 1.0);
+
+$Oshima - 340;
+;//●●○ 下本場内
+	Section.BeginNew(0, 2, 4);
+	Structure['PoleSL1'].Put(0, -2.6, -1.0, 0, 0, 0, 0, 1, 1.0);
+	Signal['type3'].Put(0, 0, -2.4, 3.8, 0, 0, 0, 0, 1, 1.0);
+$Oshima - 340;
+		$dist = distance;
+		$Section2=3996;
+		$LastBcn=600;
+	include 'utility\Beacon60st.txt';
+		$LastPut=3200;
+		$LastBcn=3996;
+	include 'utility\Beacon60plus.txt';
+
+$Oshima-89;
+	Repeater['EnePole00'].End();
+
+$Oshima - 75;
+	Track['10'].Position(0, 0, 200, 0); // 上本
+	Repeater['Rail10L'].Begin('10', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail10R'].Begin('10',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail10u'].Begin('10', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	JointNoise.Play(0);
+
+$Oshima - 45;
+	Track['10'].Position(2.26, 0, 0, 0); // 上本
+
+$Oshima - 15;
+	Track['10'].Position(6.78, 0, -200, 0); // 上本
+
+$Oshima - 5;
+;//●●○ (上本出発)
+	Structure['PoleSL1'].Put('10', 6.0, -1.0, 0, 0, 180, 0, 1, 1.0);
+//	Signal['type3'].Put('10', 0, -2.6, 3.8, 0, 0, 0, 0, 1, 25);
+
+$Oshima + 15;
+	Track['10'].Position(9.04, 0, 0, 0); // 上本
+
+//▼▼▼ 甲斐大島 (CC15)
+$Oshima + 15;
+	Repeater['Form00S'].Begin0(0, 1, 5.0, 5.0, 'FormR2');
+	Repeater['Form10S'].Begin0('10', 1, 5.0, 5.0, 'FormL2');
+	Repeater['Form00C'].Begin0(0, 1, 5.0, 5.0, 'FormCR2');
+	Repeater['Form10C'].Begin0('10', 1, 5.0, 5.0, 'FormCL2');
+
+$Oshima + 25;
+	Track['01'].Position(-5.70, 0, 0, 0); // 下１
+	Repeater['Rail01L'].Begin('01', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail01R'].Begin('01',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail01u'].Begin('01', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+
+$Oshima + 80;
+	Track['01'].Position(-5.70, 0, 162, 0); // 下１
+
+$Oshima + 90;
+	Curve.Begin(285);
+	Track['01'].Position(-5.30, 0, 375, 0); // 下１
+	Track['10'].Position(9.04, 0, -285, 0); // 上本
+
+$Oshima + 95;
+	Repeater['Form00S'].End();
+	Repeater['Form10S'].End();
+	Repeater['Form00C'].End();
+	Repeater['Form10C'].End();
+//▲▲▲ 十島 (CC11)
+
+$Oshima + 122;
+	Curve.End();
+	Track['10'].Position(7.23, 0, 0, 0); // 上本
+
+$Oshima + 125;
+	Track['01'].Position(-1.90, 0, -162, 0); // 下１
+
+$Oshima + 140;
+;//●●○ 下本出発
+	Section.BeginNew(0, 2, 4);
+	Structure['PoleSL1'].Put('01', -2.2, -1.0, 0, 0, 0, 0, 1, 1.0);
+	Signal['type3'].Put('01', 0, -2.0, 3.8, 0, 0, 0, 0, 1, 1.0);
+$Oshima + 140;
+		$dist = distance;
+		$Section2=636;
+		$LastBcn=360;
+	include 'utility\Beacon60st.txt';
+
+$Oshima + 150;
+	Track['01'].Position(0.00, 0, 0, 0); // 下１
+	Repeater['Rail01L'].End();
+	Repeater['Rail01R'].End();
+	Repeater['Rail01u'].End();
+	JointNoise.Play(0);
+
+$Oshima + 170;
+	Curve.Begin(-285);
+	Track['10'].Position(1.81, 0, 285, 0); // 上本
+
+$Oshima + 202;
+	Curve.End();
+	Track['10'].Position(0.00, 0, 0, 0); // 上本
+	Repeater['Rail10L'].End();
+	Repeater['Rail10R'].End();
+	Repeater['Rail10u'].End();
+	JointNoise.Play(0);
+
+
+
+
+
+//--------------------------------------------------------------------------
+
+
+
+// (C)Harupi

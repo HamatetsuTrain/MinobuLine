@@ -1,0 +1,168 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// 50065 - 49740  map_s03/cc18_cc19
+// 身延線 波高島(CC18) 下本出 ～ 下部温泉(CC19) 場内
+//////////////////////////////////////////////////////////////////////////
+
+// ※駅中心　49K880
+$CCWay = $Hadakajima+120;
+
+$CCWay+65;
+//	Curve.Begin(329);
+
+$CCWay+45;
+		$dist = distance;
+		$slope=25;
+	include 'utility\GraUpStart.txt';
+
+$CCWay+90;
+	Curve.End();
+
+$CCWay+91;
+		$dist = distance;
+		$radius=-300;
+		$cant=-40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+135;
+;// ●●○ (上本場内)
+	Structure['PoleSL1'].Put(0, 2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, 2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+
+$CCWay+330;
+		$dist = distance;
+		$slope2=3.3;
+	include 'utility\GraUpChange.txt';
+
+$CCWay+440;
+		$dist = distance;
+		//$radius=-300;
+		//$cant=-40;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+450;
+//＊＊＊ 第二湯川 106
+	RollingNoise.Change(3);
+	Repeater['Rail00u'].End();
+	Repeater['Bridge00'].Begin(0, 0, 0, 5.0, 0, 0, 0, 3, 5, 5, 'Bridge01');
+	Repeater['Bridge_Makuragi0'].Begin(0, 0, 0, 2.0, 0, 0, 0, 3, 2, 2, 'Bridge_Makuragi');
+	Repeater['BridgeuR'].Begin(0, 0, 0, 5.0, 0, 0, 0, 3, 5.0, 5.0, 'BridgeSGR0');
+$CCWay+450;
+		$dist = distance;
+		$riverlen=105;
+	include 'utility\River.txt';
+
+$CCWay+555;
+//＊＊＊
+	RollingNoise.Change(0);
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Bridge00'].End();
+	Repeater['Bridge_Makuragi0'].End();
+	Repeater['BridgeuR'].End();
+
+$CCWay+555;
+		$dist = distance;
+		$radius=300;
+		$cant=40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+555;
+		$dist = distance;
+		$slope2=20;
+	include 'utility\GraUpChange.txt';
+
+$CCWay+767;
+;// □■■ (上本場内　遠方)
+	Structure['PoleSL1'].Put(0, -2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+
+$CCWay+790;
+		$dist = distance;
+		$slope2=12;
+	include 'utility\GraUpChange.txt';
+
+$CCWay+870;
+		$dist = distance;
+		//$radius=300;
+		//$cant=40;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+871;
+		$dist = distance;
+		$radius=-350;
+		$cant=-40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+1080;
+		$dist = distance;
+		$slope2=25;
+	include 'utility\GraUpChange.txt';
+
+$CCWay+1120;
+		$dist = distance;
+		//$radius=-350;
+		//$cant=-40;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+1140;
+		$dist = distance;
+		$radius=-300;
+		$cant=-30;
+	include 'utility\CurveStart.txt';
+
+$CCWay+1190;
+		$dist = distance;
+		//$radius=-300;
+		//$cant=-30;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+1190;
+		$dist = distance;
+	include 'utility\GraUpEnd.txt';
+
+$CCWay+1210;
+//＊＊＊ 下部川 32
+	RollingNoise.Change(3);
+	Repeater['Rail00u'].End();
+	Repeater['Bridge00'].Begin(0, 0, 0, 5.0, 0, 0, 0, 3, 5, 5, 'Bridge01');
+	Repeater['Bridge_Makuragi0'].Begin(0, 0, 0, 2.0, 0, 0, 0, 3, 2, 2, 'Bridge_Makuragi');
+	Repeater['BridgeuR'].Begin(0, 0, 0, 5.0, 0, 0, 0, 3, 5.0, 5.0, 'BridgeSGR0');
+$CCWay+1210;
+		$dist = distance;
+		$riverlen=35;
+	include 'utility\River.txt';
+
+$CCWay+1245;
+//＊＊＊
+	RollingNoise.Change(0);
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Bridge00'].End();
+	Repeater['Bridge_Makuragi0'].End();
+	Repeater['BridgeuR'].End();
+
+
+
+
+
+
+
+
+$CCWay+749;
+;// ■■□ (下本場内　遠方)
+//	Structure['PoleSL1'].Put(0, -2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+
+$CCWay+1130;
+;//●●○ 下本場内
+//	Section.BeginNew(0, 2, 4);
+//	Structure['PoleSL1'].Put(0, 2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, 2.6, 2.8, 0, 0, 0, 0, 1, 25);
+
+
+
+//--------------------------------------------------------------------------
+
+
+
+// (C)Harupi

@@ -1,0 +1,108 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// 51535 - 49740  map_s03/cc19_cc20
+// 身延線 下部温泉(CC19) 下本出 ～ 甲斐常葉(CC20) 場内
+//////////////////////////////////////////////////////////////////////////
+
+// ※駅中心　51K390
+$CCWay = $Shimobe-390;
+
+$CCWay+510;
+//	Curve.Begin(-300);
+
+$CCWay+655;
+//＊＊＊ 第三湯川 39
+	RollingNoise.Change(3);
+	Repeater['Rail00u'].End();
+	Repeater['Bridge00'].Begin(0, 0, 0, 5.0, 0, 0, 0, 3, 5, 5, 'Bridge01');
+	Repeater['Bridge_Makuragi0'].Begin(0, 0, 0, 2.0, 0, 0, 0, 3, 2, 2, 'Bridge_Makuragi');
+	Repeater['BridgeuR'].Begin(0, 0, 0, 5.0, 0, 0, 0, 3, 5.0, 5.0, 'BridgeSGR0');
+$CCWay+655;
+		$dist = distance;
+		$riverlen=40;
+	include 'utility\River.txt';
+
+$CCWay+675;
+	Curve.End();
+
+$CCWay+695;
+//＊＊＊
+	RollingNoise.Change(0);
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Bridge00'].End();
+	Repeater['Bridge_Makuragi0'].End();
+	Repeater['BridgeuR'].End();
+
+$CCWay+690;
+		$dist = distance;
+		$radius=-300;
+		$cant=-35;
+	include 'utility\CurveStart.txt';
+
+$CCWay+700;
+		$dist = distance;
+		$slope=9.1;
+	include 'utility\GraUpStart.txt';
+
+$CCWay+701;
+;// ●●○ (上本場内)
+	Structure['PoleSL1'].Put(0, 2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, 2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+
+$CCWay+900;
+		$dist = distance;
+		//$radius=-300;
+		//$cant=-35;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+901;
+		$dist = distance;
+		$radius=300;
+		$cant=35;
+	include 'utility\CurveStart.txt';
+
+$CCWay+1020;
+		$dist = distance;
+		//$radius=300;
+		//$cant=35;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+1078;
+;// □■■ (上本場内　遠方)
+	Structure['PoleSL1'].Put(0, 2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, 2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$CCWay+749;
+;// ■■□ (下本場内　遠方)
+//	Structure['PoleSL1'].Put(0, -2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+
+$CCWay+1130;
+;//●●○ 下本場内
+//	Section.BeginNew(0, 2, 4);
+//	Structure['PoleSL1'].Put(0, 2.6, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, 2.6, 2.8, 0, 0, 0, 0, 1, 25);
+
+
+
+//--------------------------------------------------------------------------
+
+
+
+// (C)Harupi

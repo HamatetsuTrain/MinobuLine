@@ -1,0 +1,30 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// utility/Beacon60plus
+// ATS-PT TS/TR/TL地上子 (閉塞 おかわり)
+//////////////////////////////////////////////////////////////////////////
+
+// 引数 //////
+// ($location : 制限開始点[m])
+// $LastPut : 何m前に置くか[m]
+// $LastBcn : 渡す閉塞長[m]
+/////////////
+// →[設置点]→$SecB→[閉塞境界]→($Section1)$SecA→[閉塞境界]
+// $SecB : B[m]
+// $SecA : A[m]
+
+$location = $dist;
+
+//$SecA = $SecB;
+//$SecB = ($Section2 % 4000);
+
+
+//$Option = floor(($LastBcn % 4000) / 4) * 1000000 + floor($SecB / 4) * 1000 + floor($SecA / 4);
+$Option = floor($SecB / 4) * 1000 + floor($SecA / 4);
+
+$location - $LastPut;
+	Beacon.Put(60, 1, $Option);
+	Structure['Beacon_p'].Put(0, 0, 0, 0, 0, 0, 0, 3, 0);
+
+////////////////////////////////////////////////////////////////

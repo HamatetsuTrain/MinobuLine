@@ -1,0 +1,17 @@
+BveTs Signal Aspects List 2.00
+type0,Signal0L0,,,,Signal0L4
+,Signal0G0,,,,Signal0G4
+type1,Signal1L0,,Signal1L2,Signal1L3,Signal1L4
+,Signal1G0,,Signal1G2,Signal1G3,Signal1G4
+type2,Signal2L0,,Signal2L2,,
+,Signal2G0,,Signal2G2,,
+type3,Signal3L0,,Signal3L2,,Signal3L4
+,Signal3G0,,Signal3G2,,Signal3G4
+type4,Signal4L0,Signal4L1,Signal4L2,,Signal4L4
+,Signal4G0,Signal4G1,Signal4G2,,Signal4G4
+type5,Signal5L0,Signal5L1,Signal5L2,Signal5L3,Signal5L4
+,Signal5G0,Signal5G1,Signal5G2,Signal5G3,Signal5G4
+type6,Signal6L2,Signal6L2,Signal6L3,Signal6L4,Signal6L4
+,Signal6G2,Signal6G2,Signal6G3,Signal6G4,Signal6G4
+typeR,SignalRL0,SignalRL1,SignalRL1,SignalRL1,SignalRL4
+,,,,,

@@ -1,0 +1,108 @@
+﻿BveTs Map 2.00
+
+// -------------------------------------------------------------------------------------------------------------
+
+// 路線基本ファイル
+//	include 'map_h07\AM_map.txt';
+
+// BVE Load系
+	Structure.Load('map_s03\Sub_S03_structures.txt');
+	Signal.Load('map_s03\Sub_S03_signals.txt');
+	Sound.Load('map_s03\Sub_S03_sound.txt');
+	Sound3D.Load('map_s03\Sub_S03_sounds3d.txt');
+
+
+// ATS-S
+
+//////////////////////////////////////////////////////////////////////////
+0;
+// ATS設定
+	Beacon.Put(50, 1, 4); // PT
+1;
+// 線区最高速度
+	Beacon.Put(61, 0, 85);
+
+// 閉塞初期値代入
+$SecA = 3996;
+$SecB = 3996;
+//////////////////////////////////////////////////////////////////////////
+
+	SpeedLimit.SetSignal(0,25,45,75,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,);
+
+
+// -------------------------------------------------------------------------------------------------------------
+0;
+	Background.Change('Bg');
+	Curve.Gauge(1.067);
+	Irregularity.Change(0.00125, 0.0008, 0.0005, 50, 50, 50); // 軌道変位
+	Adhesion.Change(0.351, 0, 0.0095); // 粘着特性
+	// Adhesion.Change(0.251, 0, 0.0095); // 粘着特性
+	Track['Height'].Position(0, -1.1);
+	Repeater['Rail00L'].Begin(, -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail00R'].Begin(,  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Ground'].Begin('Height',  0, 0, 0, 0, 0, 0, 1, 25, 25, 'Grass');
+
+	Repeater['Kasen00'].Begin(0, 0, 0, 0, 0, 0, 0, 1, 25, 25, 'KasenS0');
+
+;//	Repeater['Dike00L'].Begin0(, 1, 25, 25, 'DikeL1');
+;//	Repeater['Dike00R'].Begin0(, 1, 25, 25, 'DikeR1');
+;//	Repeater['Dike01L'].Begin0(1, 1, 25, 25, 'DikeL1');
+;//	Repeater['Dike01R'].Begin0(1, 1, 25, 25, 'DikeR1');
+
+;//	Repeater['Pole0'].Begin(0, 0, 0, 0, 0, 0, 0, 1, 25, 50, 'PoleEL1', 'PoleEL2');
+;//	Repeater['Pole1'].Begin(1, 0, 0, 0, 0, 0, 0, 1, 25, 50, 'PoleER1', 'PoleER2');
+;//	Repeater['Kasen1'].Begin(1, 0, 0, 0, 0, 0, 0, 1, 50, 50, 'KasenS1');
+;//	Repeater['Kasen2'].Begin(2, 0, 0, 0, 0, 0, 0, 1, 50, 50, 'KasenS1');
+;//	Repeater['Kasen3'].Begin(3, 0, 0, 0, 0, 0, 0, 1, 50, 50, 'KasenS1');
+;//	Repeater['Kasen4'].Begin(4, 0, 0, 0, 0, 0, 0, 1, 50, 50, 'KasenS1');
+
+;//	Repeater['Wall3L'].Begin(3, -2.2, 0, 0, 0, 0, 0, 2.5, 2.5, 2.5, 'Wall_HamaCon');
+;//	Repeater['Wall4R'].Begin(4,  2.2, 0, 0, 0, 0, 0, 2.5, 2.5, 2.5, 'Wall_HamaCon');
+
+	RollingNoise.Change(0);
+
+//////////////////////////////////////////////////////////////////////////
+$NishiFujinomiya=1000;//11580
+	include 'map_s03\cc07_K01.txt';
+	include 'map_s03\cc07_cc09.txt';
+
+$Shibakawa= $NishiFujinomiya+7300;//18880;
+	include 'map_s03\cc09_K01.txt';
+	include 'map_s03\cc09_cc11.txt';
+
+$Toshima= $Shibakawa+7020;//25900
+	include 'map_s03\cc11_K01.txt';
+	include 'map_s03\cc11_cc14.txt';
+
+$Utsubuna= $Toshima+7850;//33750
+	include 'map_s03\cc14_K01.txt';
+	include 'map_s03\cc14_cc15.txt';
+
+$Oshima= $Utsubuna+5640;//39390
+	include 'map_s03\cc15_K01.txt';
+	include 'map_s03\cc15_cc16.txt';
+
+$Minobu= $Oshima+3770;//43160
+	include 'map_s03\cc16_K01.txt';
+	include 'map_s03\cc16_cc18.txt';
+
+$Hadakajima= $Minobu+6720;//49880
+	include 'map_s03\cc18_K01.txt';
+	include 'map_s03\cc18_cc19.txt';
+
+$Shimobe= $Hadakajima+1510;//51390
+	include 'map_s03\cc19_K01.txt';
+	include 'map_s03\cc19_cc20.txt';
+
+//////////////////////////////////////////////////////////////////////////
+// 駅ファイル
+	Station.Load('map_s03\Sub_S03K1_stations.txt');
+// 停止目標
+	include 'map_s03\Sub_S03K1_stops.txt';
+// 他列車
+	include 'map_s03\Sub_S03K1_trains.txt';
+
+
+
+// (C)Harupi

@@ -1,0 +1,21 @@
+BveTs Sound List 2.00
+et01, ..\sounds\fue02.wav,1
+et04, ..\sounds\fue03.wav,3
+et05, ..\sounds\fue04.wav,3
+
+;an0101, ..\sounds\an0101.wav
+;an0102, ..\sounds\an0102.wav
+;an0201, ..\sounds\an0201.wav
+;an0202, ..\sounds\an0202.wav
+;an0301, ..\sounds\an0301.wav
+;an0302, ..\sounds\an0302.wav
+;an0402, ..\sounds\an0402.wav
+;an0501, ..\sounds\an0501.wav
+;an0502, ..\sounds\an0502.wav
+;an0601, ..\sounds\an0601.wav
+;an0602, ..\sounds\an0602.wav
+;an0701, ..\sounds\an0701.wav
+;an0702, ..\sounds\an0702.wav
+;an0801, ..\sounds\an0801.wav
+;an0802, ..\sounds\an0802.wav
+;an0902, ..\sounds\an0902.wav

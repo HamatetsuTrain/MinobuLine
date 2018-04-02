@@ -1,0 +1,393 @@
+BveTs Structure List 2.00
+
+#; #; SigPole,structures\default\SigPole.x
+#; SpeedlimBeginL,structures\default\SpeedlimL.x
+#; SpeedlimBegin,structures\default\Speedlim.x
+#; SpeedlimBeginR,structures\default\SpeedlimR.x
+#; SpeedlimEnd,structures\default\SpeedlimEnd.x
+#; SpeedlimPole,structures\default\SpeedlimPole.x
+#; Speedlim0,structures\default\Speedlim0.x
+#; Speedlim1,structures\default\Speedlim1.x
+#; Speedlim2,structures\default\Speedlim2.x
+#; Speedlim3,structures\default\Speedlim3.x
+#; Speedlim4,structures\default\Speedlim4.x
+#; Speedlim5,structures\default\Speedlim5.x
+#; Speedlim6,structures\default\Speedlim6.x
+#; Speedlim7,structures\default\Speedlim7.x
+#; Speedlim8,structures\default\Speedlim8.x
+#; Speedlim9,structures\default\Speedlim9.x
+#; #; Stop,structures\default\Stop.x
+#; Pole0_0,structures\Pole1.x
+#; Pole1_0,structures\Pole2.x
+#; Pole2_0,structures\Pole3.x
+#; Pole3_0,structures\Pole4.x
+#; #; Rail1,structures\Hamatetsu\Rail\SlabS2.x
+#; #; Rail2,structures\Hamatetsu\Rail\SlabS2-D.x
+#; #; Rail3,structures\Hamatetsu\Rail\SlabS2-D.x
+#; #; Rail4,
+#; #; Rail5,structures\Hamatetsu\Rail\SlabS2.x
+#; #; Rail6,structures\Hamatetsu\Kuso-Road.x
+#; #; Rail7,structures\Hamatetsu\Rail\Slab-L-165L.x
+#; #; Rail8,structures\Hamatetsu\Rail\Slab-L-165R.x
+#; #; Rail9,structures\Hamatetsu\Rail\Slab-L-329L.x
+#; #; Rail10,structures\Hamatetsu\Rail\Slab-L-329R.x
+#; #; Rail11,structures\Hamatetsu\Rail\Slab-L-800L.x
+#; #; Rail12,structures\Hamatetsu\Rail\Slab-L-1000R.x
+#; #; Rail13,structures\BallastS.x
+#; #; Rail14,structures\Hamatetsu\Rail\Slab-D-329L.x
+#; #; Rail15,structures\Hamatetsu\Rail\Slab-D-329R.x
+#; #; Rail16,structures\Hamatetsu\Rail\Slab-L-700R.x
+#; #; Rail17,structures\Hamatetsu\Rail\Slab-D-800L.x
+#; #; Rail18,structures\Hamatetsu\Rail\Slab-L-600L.x
+#; #; Rail40,structures\Hamatetsu\Rail\Slab-nL-0.x
+#; #; Rail41,structures\Hamatetsu\Rail\Slab-nL-165R.x
+#; #; Rail42,structures\Hamatetsu\Rail\Slab-nL-329L.x
+#; #; Rail43,structures\Hamatetsu\Rail\Slab-nL-600L.x
+#; WallL0,structures\WallL.x
+#; WallR0,structures\WallR.x
+#; WallL1,structures\FormWallL.x
+#; WallR1,structures\FormWallR.x
+#; WallL3,structures\BridgeL.x
+#; WallR3,structures\BridgeR.x
+#; WallL4,structures\Hamatetsu\Wall\Ton-SB1-L.x
+#; WallR4,structures\Hamatetsu\Wall\Ton-SB1-R.x
+#; WallL5,structures\Hamatetsu\Wall\Ton-SB2-L.x
+#; WallR5,structures\Hamatetsu\Wall\Ton-SB2-R.x
+#; WallL6,structures\Hamatetsu\Wall\Bridge0L.x
+#; WallR6,structures\Hamatetsu\Wall\Bridge0R.x
+#; WallL7,structures\Hamatetsu\Wall\Ton-SC1-L.x
+#; WallR7,structures\Hamatetsu\Wall\Ton-SC1-R.x
+#; WallL8,structures\Hamatetsu\Wall\Ton-SC2-L.x
+#; WallR8,structures\Hamatetsu\Wall\Ton-SC2-R.x
+#; DikeL0,structures\DikeL.x
+#; DikeR0,structures\DikeR.x
+#; DikeL1,structures\Hamatetsu\Wall\WallPole.x
+#; DikeR1,structures\Hamatetsu\Wall\WallPole.x
+#; CrackL0,structures\CraBalL.x
+#; CrackR0,structures\CraBalR.x
+#; CrackL1,structures\CraSlbL.x
+#; CrackR1,structures\CraSlbR.x
+#; CrackL2,structures\CraGrsL.x
+#; CrackR2,structures\CraGrsR.x
+#; Ground1,structures\River.x
+#; Ground2,structures\Ditch.x
+#; FormL0,structures\Hamatetsu\Form\FormL1.x
+#; FormR0,structures\Hamatetsu\Form\FormR1.x
+#; FormL1,structures\Hamatetsu\Form\FormL1.x
+#; FormR1,structures\Hamatetsu\Form\FormR1.x
+#; #; FormL2,structures\FormL.x
+#; #; FormR2,structures\FormR.x
+#; FormCL0,structures\FormCL.x
+#; FormCR0,structures\FormCR.x
+#; FormCL1,structures\Hamatetsu\Form\FormCL1.x
+#; FormCR1,structures\Hamatetsu\Form\FormCR1.x
+#; #; FormCL2,structures\FormCLS.x
+#; #; FormCR2,structures\FormCRS.x
+#; RoofL1,structures\RoofL.x
+#; RoofR1,structures\RoofR.x
+#; RoofL2,structures\Hamatetsu\Wall\RoofL.x
+#; RoofR2,structures\Hamatetsu\Wall\RoofR.x
+#; RoofCL1,structures\RoofCL.x
+#; RoofCR1,structures\RoofCR.x
+#; RoofCL2,structures\Hamatetsu\Wall\RoofCL.x
+#; RoofCR2,structures\Hamatetsu\Wall\RoofCR.x
+#; Tenryu_sta,structures\Hamatetsu\Form\Tenryu_sta.x
+#; Pole0_1,structures\Pole1.x
+#; Hama-Ton-SB2,structures\Hamatetsu\Wall\Ton-SB2-W.x
+#; Hama-Ton-SB1,structures\Hamatetsu\Wall\Ton-SB1-W.x
+#; Freeobj17,structures\Hamatetsu\Wall\FormE-R.x
+#; Freeobj18,structures\Hamatetsu\Wall\FormE-L.x
+#; Freeobj19,structures\Hamatetsu\Wall\UG-Pole.x
+#; Freeobj30,structures\Hamatetsu\Form\saku00.x
+#; Freeobj31,structures\Hamatetsu\Form\saku01.x
+#; Freeobj102,structures\Hamatetsu\Form\FormWall-Abe0.x
+Signal0L0, ..\..\structures\default\signal20.x
+Signal0L4, ..\..\structures\default\signal24.x
+Signal0G0, ..\..\structures\default\glare20.x
+Signal0G4, ..\..\structures\default\glare24.x
+Signal1L0, ..\..\structures\default\signal4yg0.x
+Signal1L2, ..\..\structures\default\signal4yg2.x
+Signal1L3, ..\..\structures\default\signal4yg3.x
+Signal1L4, ..\..\structures\default\signal4yg4.x
+Signal1G0, ..\..\structures\default\glare4yg0.x
+Signal1G2, ..\..\structures\default\glare4yg2.x
+Signal1G3, ..\..\structures\default\glare4yg3.x
+Signal1G4, ..\..\structures\default\glare4yg4.x
+Signal2L0, ..\..\structures\default\signal20.x
+Signal2L2, ..\..\structures\default\signal22.x
+Signal2G0, ..\..\structures\default\glare20.x
+Signal2G2, ..\..\structures\default\glare22.x
+Signal3L0, ..\..\structures\default\signal30.x
+Signal3L2, ..\..\structures\default\signal32.x
+Signal3L4, ..\..\structures\default\signal34.x
+Signal3G0, ..\..\structures\default\glare30.x
+Signal3G2, ..\..\structures\default\glare32.x
+Signal3G4, ..\..\structures\default\glare34.x
+Signal4L0, ..\..\structures\default\signal4yy0.x
+Signal4L1, ..\..\structures\default\signal4yy1.x
+Signal4L2, ..\..\structures\default\signal4yy2.x
+Signal4L4, ..\..\structures\default\signal4yy4.x
+Signal4G0, ..\..\structures\default\glare4yy0.x
+Signal4G1, ..\..\structures\default\glare4yy1.x
+Signal4G2, ..\..\structures\default\glare4yy2.x
+Signal4G4, ..\..\structures\default\glare4yy4.x
+Signal5L0, ..\..\structures\default\signal50.x
+Signal5L1, ..\..\structures\default\signal51.x
+Signal5L2, ..\..\structures\default\signal52.x
+Signal5L3, ..\..\structures\default\signal53.x
+Signal5L4, ..\..\structures\default\signal54.x
+Signal5G0, ..\..\structures\default\glare50.x
+Signal5G1, ..\..\structures\default\glare51.x
+Signal5G2, ..\..\structures\default\glare52.x
+Signal5G3, ..\..\structures\default\glare53.x
+Signal5G4, ..\..\structures\default\glare54.x
+SignalRL0, ..\..\structures\default\signalrep0.x
+SignalRL1, ..\..\structures\default\signalrep1.x
+SignalRL4, ..\..\structures\default\signalrep4.x
+
+#; Ballast0T, strpack1\Ballast0T.x
+
+#; KasenS0, harupi\Pole\kasen25_01S.x
+#; KasenS1, harupi\Pole\kasen50_01S.x
+#; KasenL1, harupi\Pole\kasen50_01L.x
+#; KasenR1, harupi\Pole\kasen50_01R.x
+#; Kasen50N, harupi\Pole\kasen50N_01S.x
+#; PoleEL1, harupi\Pole\epole_et01L.x
+#; PoleER1, harupi\Pole\epole_et01R.x
+#; PoleEL2, harupi\Pole\epole_et02L.x
+#; PoleER2, harupi\Pole\epole_et02R.x
+#; PoleJRC1_L, harupi\Pole\epole_jrc01L.x
+#; PoleJRC1_R, harupi\Pole\epole_jrc01R.x
+#; Rail_lb, harupi\Rail\ladder.x
+#; Rail_lp, harupi\Rail\ladder_p.x
+#; Rail_m1, harupi\Rail\makura01.x
+#; Rail_m2, harupi\Rail\makura02.x
+#; Rail_m3, harupi\Rail\makura03.x
+#; Rail_m4, harupi\Rail\makura04.x
+#; Rail_m5, harupi\Rail\makura05.x
+#; Rail_ub, harupi\Rail\Rail_under02.x
+#; Bridge_Amma, harupi\Rail\bridge_amma_1m.x
+#; RoofL10,structures\Hamatetsu\Form\RoofL-Abe.x
+#; RoofR10,structures\Hamatetsu\Form\RoofR-Abe.x
+#; RoofCL10,structures\Hamatetsu\Form\RoofCL-Abe.x
+#; RoofCR10,structures\Hamatetsu\Form\RoofCR-Abe.x
+#; Wall_HamaCon, harupi\Wall\Wall_HamaConL.x
+#; Wall_tnky1L, harupi\Wall\Wall_tnky1L.x
+#; Wall_tnky1R, harupi\Wall\Wall_tnky1R.x
+#; Wall_tnky2L, harupi\Wall\Wall_tnky2L.x
+#; Wall_tnky2R, harupi\Wall\Wall_tnky2R.x
+#; Wall_st00L,structures\Hamatetsu\Form\FormWallL-Abe.x
+#; Wall_st00R,structures\Hamatetsu\Form\FormWallR-Abe.x
+
+#; KusoRoad, ..\Conv-Hamatetsu\structures\Hamatetsu\Kuso-Road.x
+
+#; tea1,structures\Hamatetsu\Tea.x
+#; tea2,structures\Hamatetsu\Tea2.x
+#; saku00,structures\Hamatetsu\Form\saku00.x
+#; saku01,structures\Hamatetsu\Form\saku01.x
+
+# strpack
+# # 背景
+Bg			, ..\..\Structures\strpack1\Bg.x
+Grass		, ..\..\Structures\strpack1\Grass.x
+# # 線路
+Ballast0	, ..\..\Structures\strpack1\Ballast0.x
+Ballast1	, ..\..\Structures\strpack1\Ballast1.x
+Ballast2	, ..\..\Structures\strpack1\Ballast2.x
+Ballast3	, ..\..\Structures\strpack1\Ballast3.x
+Ballast4	, ..\..\Structures\strpack1\Ballast4.x
+RailL0		, ..\..\Structures\strpack1\RailL0.x
+RailL1		, ..\..\Structures\strpack1\RailL1.x
+RailL2		, ..\..\Structures\strpack1\RailL2.x
+RailL3		, ..\..\Structures\strpack1\RailL3.x
+RailL4		, ..\..\Structures\strpack1\RailL4.x
+RailR0		, ..\..\Structures\strpack1\RailR0.x
+RailR1		, ..\..\Structures\strpack1\RailR1.x
+RailR2		, ..\..\Structures\strpack1\RailR2.x
+RailR3		, ..\..\Structures\strpack1\RailR3.x
+RailR4		, ..\..\Structures\strpack1\RailR4.x
+# # 架線柱
+#; Pole0_0		, ..\structures\Pole1.x
+
+# Hamatetsu objects
+Rail_u	, ..\harupi\Rail\Rail_under01.x
+Bridge_Makuragi	, ..\harupi\Rail\bridge_Makuragi_2m.x
+#; Bridge_TenryuN, harupi\Wall\bridge_tenryu_N62m.x
+#; Bridge_TenryuK, harupi\Wall\bridge_tenryu_K62m.x
+Bridge01	, ..\harupi\Rail\bridge_gata01.x
+#; Bridge02, harupi\Rail\bridge_gata02.x
+#; BridgeSGL0, harupi\Rail\bridge_AmiG0L.x
+BridgeSGR0	, ..\harupi\Rail\bridge_AmiG0R.x
+#; BridgeSGL1, harupi\Rail\bridge_AmiG1L.x
+#; BridgeSGR1, harupi\Rail\bridge_AmiG1R.x
+#; #; BridgeSRL0, harupi\Rail\bridge_AmiR0L.x
+#; #; BridgeSRR0, harupi\Rail\bridge_AmiR0R.x
+#; BridgeGT062, harupi\Rail\bridge_yamakita02.x
+#; BridgePillar0, harupi\Pole\bridge_pillar0.x
+
+PoleSL1	, ..\harupi\Pole\spole_et01L.x
+PoleSR1	, ..\harupi\Pole\spole_et01R.x
+
+# # 架線
+KasenS0	, ..\harupi\Pole\kasen25_01S.x
+
+# # プラットホーム
+FormL2		, ..\harupi\Form\FormL2.x
+FormR2		, ..\harupi\Form\FormR2.x
+FormCL2		, ..\harupi\Form\FormCL2.x
+FormCR2		, ..\harupi\Form\FormCR2.x
+FormLS2		, ..\harupi\Form\FormLS2.x
+FormRS2		, ..\harupi\Form\FormRS2.x
+FormCLS2	, ..\harupi\Form\FormCLS2.x
+FormCRS2	, ..\harupi\Form\FormCRS2.x
+FormRdC1	, ..\harupi\Form\FormRdC1.x
+FormRdR1	, ..\harupi\Form\FormRdR1.x
+FormRdL1	, ..\harupi\Form\FormRdL1.x
+
+# # 地上子
+Beacon_p	, ..\harupi\Rail\Beacon_pt.x
+
+#; DikeConR60,harupi\Dike\DikeConR60.x
+#; DikeConR75,harupi\Dike\DikeConR75.x
+#; DikeConL75,harupi\Dike\DikeConL75.x
+#; DikeRockR0,harupi\Dike\DikeRocR0.x
+#; DikeRockR1,harupi\Dike\DikeRocR1.x
+#; DikeRockL0,harupi\Dike\DikeRocL0.x
+#; DikeRockL1,harupi\Dike\DikeRocL1.x
+
+#; WallSakawa1, harupi\Wall\WallSakawa1.x
+#; NRBridge, harupi\Wall\NRBridge.x
+#; Sakura01, harupi\obj\Sakura01.x
+#; Gake01, harupi\Wall\gake01.x
+#; Gake02, harupi\Wall\gake02.x
+
+# # 停車標
+Freeobj20	, ..\harupi\Kamban\Stop.x
+Freeobj21	, ..\harupi\Kamban\Stop-1.x
+Freeobj22	, ..\harupi\Kamban\Stop-2.x
+Freeobj23	, ..\harupi\Kamban\Stop-4.x
+Freeobj24	, ..\harupi\Kamban\Stop-6.x
+Freeobj25	, ..\harupi\Kamban\Stop-8.x
+Freeobj26	, ..\harupi\Kamban\Stop-10.x
+
+# # 313系
+#; Tc312-1NA, harupi\Train\Tc312-1NA.x
+#; Tc312-1NB, harupi\Train\Tc312-1NB.x
+Tc312-1RA	,  ..\harupi\Train\Tc312-1RA.x
+#; Tc312-1RB, harupi\Train\Tc312-1RB.x
+#; Tc312-3NA, harupi\Train\Tc312-3NA.x
+#; Tc312-3NB, harupi\Train\Tc312-3NB.x
+#; Tc312-3TA, harupi\Train\Tc312-3TA.x
+#; Tc312-3TB, harupi\Train\Tc312-3TB.x
+#; Tc312-3WA, harupi\Train\Tc312-3WA.x
+#; Tc312-3WB, harupi\Train\Tc312-3WB.x
+#; Tc312-4CA, harupi\Train\Tc312-4CA.x
+#; Tc312-4CB, harupi\Train\Tc312-4CB.x
+#; Tc312-5CA, harupi\Train\Tc312-5CC.x
+#; Tc312-5CB, harupi\Train\Tc312-5CB.x
+
+#; Mc313-1NA, harupi\Train\Mc313-1NA.x
+Mc313-1RA	, ..\harupi\Train\Mc313-1RA.x
+#; Mc313-3NA, harupi\Train\Mc313-3NA.x
+#; Mc313-3TA, harupi\Train\Mc313-3TA.x
+#; Mc313-3WA, harupi\Train\Mc313-3WA.x
+
+#; T313-1NA, harupi\Train\T313-1NA.x
+#; T313-1NB, harupi\Train\T313-1NB.x
+
+#; M313-1NA, harupi\Train\M313-1NA.x
+
+#; Mc313-3IB, harupi\Train\Mc313-3IA.x
+#; M313-3IB, harupi\Train\M313-3IA.x
+#; Tc312-3IB, harupi\Train\Tc312-3IA.x
+
+#; DumpA, harupi\Train\dump_A.x
+#; DumpB, harupi\Train\dump_B.x
+
+#; #; neta, harupi\Train\zzzz.x
+
+#; #; kam_toyoda01, harupi\Kamban\kamban_toyoda01.x
+#; #; hodokyo01, harupi\obj\bridge_tenryu_hodokyo.x
+
+#; DL品 _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+#;トンネル関連(NT/fiv氏)
+1go_c1_Potal1	, ..\..\Structures\NT\tunnel\1go_c1_Potal1.x
+1go_c1_Potal2	, ..\..\Structures\NT\tunnel\1go_c1_Potal2.x
+1go_c1_ent		, ..\..\Structures\NT\tunnel\1go_c1_ent.x
+1go_c1_lp		, ..\..\Structures\NT\tunnel\1go_c1_lp.x
+1go_c1_escL		, ..\..\Structures\NT\tunnel\1go_c1_escL.x
+1go_c1_escR		, ..\..\Structures\NT\tunnel\1go_c1_escR.x
+1go_c1_ext		, ..\..\Structures\NT\tunnel\1go_c1_ext.x
+sdw_et_m		, ..\..\Structures\NT\tunnel\shadow\sdw_et_m.x
+sdw_lp_m		, ..\..\Structures\NT\tunnel\shadow\sdw_lp_m.x
+
+#;kihonsenrohyou(NT/fiv氏)
+Gp_DL		, ..\..\Structures\NT\kihonsenrohyou\gradient\Gp_DL.x
+Gp_LD		, ..\..\Structures\NT\kihonsenrohyou\gradient\Gp_LD.x
+Gp_UL		, ..\..\Structures\NT\kihonsenrohyou\gradient\Gp_UL.x
+Gp_LU		, ..\..\Structures\NT\kihonsenrohyou\gradient\Gp_LU.x
+Gp_DU		, ..\..\Structures\NT\kihonsenrohyou\gradient\Gp_DU.x
+Gp_UD		, ..\..\Structures\NT\kihonsenrohyou\gradient\Gp_UD.x
+Kilo_C0		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_A.x
+Kilo_C1		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_C1.x
+Kilo_C2		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_C2.x
+Kilo_C3		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_C3.x
+Kilo_C4		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_C4.x
+Kilo_C5		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_B.x
+Kilo_C6		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_C6.x
+Kilo_C7		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_C7.x
+Kilo_C8		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_C8.x
+Kilo_C9		, ..\..\Structures\NT\kihonsenrohyou\kilo\KP_C9.x
+Curve_P		, ..\..\Structures\NT\kihonsenrohyou\curve\Curve_P.x
+
+#;ふぇんす [金網] (hige_hosen氏)
+#; fenceMSL	,..\iida_common\fence\fence_l.x
+#; fenceMSR	,..\iida_common\fence\fence_r.x
+
+#; 373系 (N209氏)
+Mc373	, ..\..\Structures\N209\373\Mc373.x
+T373	, ..\..\Structures\N209\373\T373.x
+Tc372	, ..\..\Structures\N209\373\Tc372.x
+
+
+#; nagoya_common
+#; Road2NB	,..\Nagoya_Common\Build\Road\Road2_nonblock.x
+Fumikiri_AL	, ..\..\Nagoya_Common\Railway_Obj\Cross\Meiden\D_L.x
+Fumikiri_AR	, ..\..\Nagoya_Common\Railway_Obj\Cross\Meiden\D_R.x
+Fumikiri_AC	, ..\..\Nagoya_Common\Railway_Obj\Cross\Meiden\B_3.x
+#; DikeCoL	, ..\Nagoya_Common\Railway_Obj\Dike\DikeCoL.x
+#; DikeCoR	, ..\Nagoya_Common\Railway_Obj\Dike\DikeCoR.x
+#; Grove00	, ..\Nagoya_Common\Nature\Wood\Grove00.x
+#; Grove01	, ..\Nagoya_Common\Nature\Wood\Grove01.x
+#; Grove02	, ..\Nagoya_Common\Nature\Wood\Grove02.x
+#; Grove03	, ..\Nagoya_Common\Nature\Wood\Grove03.x
+#; Grove04	, ..\Nagoya_Common\Nature\Wood\Grove04.x
+#; Wood00	, ..\Nagoya_Common\Nature\Wood\Wood00.x
+#; Wood01	, ..\Nagoya_Common\Nature\Wood\Wood01.x
+#; Wood02	, ..\Nagoya_Common\Nature\Wood\Wood02.x
+#; Wood03	, ..\Nagoya_Common\Nature\Wood\Wood03.x
+#; Wood04	, ..\Nagoya_Common\Nature\Wood\Wood04.x
+#; Wood05	, ..\Nagoya_Common\Nature\Wood\Wood05.x
+#; Wood06	, ..\Nagoya_Common\Nature\Wood\Wood06.x
+# 信号機 4灯式（遠方）
+Signal6L2	, ..\..\Nagoya_Common\Railway_Obj\Signal\Normal\Signal6L2.x
+Signal6L3	, ..\..\Nagoya_Common\Railway_Obj\Signal\Normal\Signal6L3.x
+Signal6L4	, ..\..\Nagoya_Common\Railway_Obj\Signal\Normal\Signal6L4.x
+Signal6G2	, ..\..\Nagoya_Common\Railway_Obj\Signal\Glare\Y.x
+Signal6G3	, ..\..\Nagoya_Common\Railway_Obj\Signal\Glare\YG.x
+Signal6G4	, ..\..\Nagoya_Common\Railway_Obj\Signal\Glare\G.x
+# 架線柱
+Pole0_2		, ..\..\Nagoya_Common\Railway_Obj\Pole\Pole0_2.x
+Pole0_4		, ..\..\Nagoya_Common\Railway_Obj\Pole\Pole0_4.x
+# 山
+#; Mt, ..\Nagoya_Common\Nature\Mt\Mt.x
+#; Mt_L, ..\Nagoya_Common\Nature\Mt\Mt_L.x
+#; Mt_R, ..\Nagoya_Common\Nature\Mt\Mt_R.x
+# 地面
+Levee	, ..\..\Nagoya_Common\Railway_Obj\Ground\Levee.x
+River	, ..\..\Nagoya_Common\Railway_Obj\Ground\River.x
+# ヒト
+#; People68, ..\Nagoya_Common\Nature\People\68.x
+#; People71, ..\Nagoya_Common\Nature\People\71.x
+#; People72, ..\Nagoya_Common\Nature\People\72.x
+

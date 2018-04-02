@@ -1,0 +1,205 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// 11380 - 12035  map_s03/cc07_K1
+// 身延線 西富士宮(CC07) 場 ～ 下本出
+//////////////////////////////////////////////////////////////////////////
+
+// ※駅中心　11K580
+$NishiFujinomiya + 0;
+	Beacon.Put(80, 1, 11580);
+
+
+
+$NishiFujinomiya-200;
+;//●●○ 場内
+	Section.BeginNew(0, 2, 4);
+	Structure['PoleSL1'].Put(0, -2.4, -1.0, 0, 0, 0, 0, 1, 25);
+	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 25);
+$NishiFujinomiya-200;
+		$dist = distance;
+		$Section2=3996;
+		$LastBcn=600;
+	include 'utility\Beacon60st.txt';
+
+
+$NishiFujinomiya-130;
+	Track['13'].Position(-11.40, 0, 0, 0); // 下３
+	Track['12'].Position( -7.60, 0, 0, 0); // 下２
+	Track['11'].Position( -3.80, 0, 0, 0); // 下１
+	Repeater['Rail11L'].Begin('11', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail11R'].Begin('11',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail11u'].Begin('11', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Rail12L'].Begin('12', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail12R'].Begin('12',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail12u'].Begin('12', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Rail13L'].Begin('13', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail13R'].Begin('13',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail13u'].Begin('13', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+
+$NishiFujinomiya-80;
+	Track['01'].Position(0, 0, 162, 0); // 上本
+	Repeater['Rail01L'].Begin('01', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail01R'].Begin('01',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail01u'].Begin('01', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	JointNoise.Play(0);
+
+$NishiFujinomiya-70;
+		$dist = distance;
+		$slope=20;
+	include 'utility\GraEnd.txt';
+
+$NishiFujinomiya-55;
+	Track['01'].Position(1.9, 0, 0, 0); // 上本
+
+$NishiFujinomiya-30;
+	Track['01'].Position(5.7, 0, 162, 0); // 上本
+
+$NishiFujinomiya-26;
+;//●●○ 出発中継
+
+
+//▼▼▼ 西富士宮 (CC07)
+$NishiFujinomiya-20;
+	Repeater['Form00S'].Begin0(0, 1, 5.0, 5.0, 'FormR2');
+	Repeater['Form01S'].Begin0('01', 1, 5.0, 5.0, 'FormL2');
+	Repeater['Form00C'].Begin0(0, 1, 5.0, 5.0, 'FormCR2');
+	Repeater['Form01C'].Begin0('01', 1, 5.0, 5.0, 'FormCL2');
+
+$NishiFujinomiya-5;
+	Track['13'].Position(-11.40, 0, 0, 0); // 下３
+	Track['12'].Position( -7.60, 0, 0, 0); // 下２
+	Track['11'].Position( -3.80, 0, 0, 0); // 下１
+	Track['01'].Position(  7.60, 0, 0, 0); // 上本
+
+$NishiFujinomiya+25;
+	Track['13'].Position(-11.40, 0, 162, 0); // 下３
+//	Track['12'].Position( -7.60, 0,   0, 0); // 下２
+//	Track['11'].Position( -3.80, 0,   0, 0); // 下１
+//	Track['01'].Position(  3.80, 0,   0, 0); // 上本
+
+$NishiFujinomiya+50;
+	Track['13'].Position(-9.50, 0, -162, 0); // 下３
+//	Track['12'].Position(-7.60, 0,    0, 0); // 下２
+//	Track['11'].Position(-3.80, 0,    0, 0); // 下１
+//	Track['01'].Position( 3.80, 0,    0, 0); // 上本
+
+$NishiFujinomiya+75;
+	Track['13'].Position(-7.60, 0,   0, 0); // 下３
+	Track['12'].Position(-7.60, 0, 162, 0); // 下２
+//	Track['11'].Position(-3.80, 0,   0, 0); // 下１
+//	Track['01'].Position( 3.80, 0,   0, 0); // 上本
+	Repeater['Rail13L'].End();
+	Repeater['Rail13R'].End();
+	Repeater['Rail13u'].End();
+
+$NishiFujinomiya+100;
+	Track['12'].Position(-5.70, 0, -162, 0); // 下２
+//	Track['11'].Position(-3.80, 0,    0, 0); // 下１
+//	Track['01'].Position( 3.80, 0,    0, 0); // 上本
+
+$NishiFujinomiya+110;
+	Repeater['Form00C'].End();
+	Repeater['Form01C'].End();
+	Repeater['Form00S'].End();
+	Repeater['Form01S'].End();
+//▲▲▲ 西富士宮 (CC07)
+
+$NishiFujinomiya+125;
+	Track['12'].Position(-3.80, 0,   0, 0); // 下２
+	Track['11'].Position(-3.80, 0, 329, 0); // 下１
+//	Track['01'].Position( 3.80, 0,   0, 0); // 上本
+	Repeater['Rail12L'].End();
+	Repeater['Rail12R'].End();
+	Repeater['Rail12u'].End();
+
+$NishiFujinomiya+132;
+//◎ 中里踏切　11.712
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$NishiFujinomiya+150;
+	Track['11'].Position(-2.85, 0, 0, 0); // 下１
+//	Track['01'].Position( 3.80, 0, 0, 0); // 上本
+
+$NishiFujinomiya+175;
+	Track['11'].Position(-0.95, 0, -329, 0); // 下１
+//	Track['01'].Position( 3.80, 0,    0, 0); // 上本
+
+$NishiFujinomiya+200;
+	Track['11'].Position( 0.00, 0, 0, 0); // 下１
+	Repeater['Rail11L'].End();
+	Repeater['Rail11R'].End();
+	Repeater['Rail11u'].End();
+	JointNoise.Play(0);
+
+$NishiFujinomiya+220;
+;//●●○ 出発
+	Section.BeginNew(0, 2, 4);
+	Structure['PoleSL1'].Put(0, -2.4, -1.0, 0, 0, 0, 0, 1, 25);
+	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 25);
+
+$NishiFujinomiya+220;
+		$dist = distance;
+		$Section2=372;
+		$LastBcn=280;
+	include 'utility\Beacon60st.txt';
+
+
+
+$NishiFujinomiya+230;
+//	Curve.Begin(162);
+	Track['11'].Position( 0.00, 0, -162, 0); // 下側
+	Track['01'].Position( 3.80, 0, -162, 0); // 上本
+	Repeater['Rail11L'].Begin('11', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail11R'].Begin('11',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail11u'].Begin('11', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	JointNoise.Play(0);
+
+$NishiFujinomiya+255;
+	Curve.Begin(-329);
+	Track['11'].Position(-1.90, 0, 329, 0); // 下側
+	Track['01'].Position( 1.90, 0, 162, 0); // 上本
+
+$NishiFujinomiya+280;
+	Curve.End();
+	Track['11'].Position(-4.75, 0, 600, 0); // 下側
+	Track['01'].Position(0.0, 0, 0, 0); // 上本
+	Repeater['Rail01L'].End();
+	Repeater['Rail01R'].End();
+	Repeater['Rail01u'].End();
+	JointNoise.Play(0);
+
+$NishiFujinomiya+280;
+		$dist = distance;
+		$radius=-300;
+		$cant=-50;
+	include 'utility\CurveStart.txt';
+
+$NishiFujinomiya+280;
+		$dist = distance;
+		$slope=25;
+	include 'utility\GraUpStart.txt';
+
+$NishiFujinomiya+305;
+//	Track['11'].Position(-3.80, 0, 0, 0); // 下側
+
+$NishiFujinomiya+320;
+	Track['11'].Position(-6.50, -0.75, 0, 0); // 下側
+	Repeater['Rail11L'].End();
+	Repeater['Rail11R'].End();
+	Repeater['Rail11u'].End();
+
+$NishiFujinomiya+455;
+;//○●● (上本出発 3)
+	Structure['PoleSL1'].Put(0, -2.4, -1.0, 0, 0, 0, 0, 1, 25);
+;//	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 25);
+
+
+
+//--------------------------------------------------------------------------
+
+
+
+// (C)Harupi

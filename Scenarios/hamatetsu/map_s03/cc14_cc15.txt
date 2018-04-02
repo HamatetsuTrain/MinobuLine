@@ -1,0 +1,772 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// 34010 - 39300  map_s03/cc14_cc15
+// 身延線 内船(CC14) 下本出 ～ 甲斐大島(CC15) 場内
+//////////////////////////////////////////////////////////////////////////
+
+// ※駅中心　33K750
+$CCWay = $Utsubuna+250;
+
+$CCWay-25;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+0;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+10;
+		$dist = distance;
+		$radius=-240;
+		$cant=-50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+56;
+;// ○●● (上本場内・下１場内)
+//	Signal['type3'].Put(0, 0,  2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+//	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+
+$CCWay+75;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+100;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+150;
+		$dist = distance;
+		//$radius=-240;
+		//$cant=-50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+150;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+151;
+		$dist = distance;
+		$radius=240;
+		$cant=50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+200;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+300;
+		$dist = distance;
+		//$radius=240;
+		//$cant=50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+300;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+301;
+;// ｣｢ 
+
+$CCWay+350;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+350;
+		$dist = distance;
+		$radius=200;
+		$cant=55;
+	include 'utility\CurveStart.txt';
+
+$CCWay+375;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+425;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+500;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+550;
+		$dist = distance;
+		//$radius=200;
+		//$cant=55;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+550;
+;//●□● 第一内船 57
+	RollingNoise.Change(4);
+	Structure['1go_c1_Potal1'].Put(0, 0, -0.3, 0, 0, 0, 0, 1, 1);
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ent');
+	Repeater['Rail00u'].End();
+	Repeater['EnePole00'].End();
+
+$CCWay+555;
+	Repeater['Wall00L'].Begin(0, 0, -0.3,  0.0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_lp');
+
+$CCWay+570;
+		$dist = distance;
+		$radius=-240;
+		$cant=-40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+595;
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ext');
+
+$CCWay+600;
+;//○□○ 第一内船
+	RollingNoise.Change(0);
+	Repeater['Wall00L'].End();
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+
+$CCWay+600;
+		$dist = distance;
+		//$slope=13.3;
+	include 'utility\GraUpEnd.txt';
+
+$CCWay+600;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+628;
+;// ■■□ (上本場内遠方)
+//	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 1.0);
+
+$CCWay+634;
+//◎ 土瓶沢踏切　34.634
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$CCWay+675;
+//＊＊＊ 土瓶沢
+	RollingNoise.Change(3);
+	Repeater['Rail00u'].End();
+	Repeater['Bridge00'].Begin(0, 0, 0, 5.0, 0, 0, 0, 3, 5, 5, 'Bridge01');
+	Repeater['Bridge_Makuragi0'].Begin(0, 0, 0, 2.0, 0, 0, 0, 3, 2, 2, 'Bridge_Makuragi');
+	Repeater['BridgeuR'].Begin(0, 0, 0, 5.0, 0, 0, 0, 3, 5.0, 5.0, 'BridgeSGR0');
+
+$CCWay+700;
+//＊＊＊
+	RollingNoise.Change(0);
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Bridge00'].End();
+	Repeater['Bridge_Makuragi0'].End();
+	Repeater['BridgeuR'].End();
+
+$CCWay+700;
+		$dist = distance;
+		$slope=-10.0;
+	include 'utility\GraDownStart.txt';
+
+$CCWay+700;
+		$dist = distance;
+		$radius=200;
+		$cant=35;
+	include 'utility\CurveStart.txt';
+
+$CCWay+720;
+;//●□● 第二内船 104
+	RollingNoise.Change(4);
+	Structure['1go_c1_Potal1'].Put(0, 0, -0.3, 0, 0, 0, 0, 1, 1);
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ent');
+	Repeater['Rail00u'].End();
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+725;
+	Repeater['Wall00L'].Begin(0, 0, -0.3,  0.0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_lp');
+
+$CCWay+815;
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ext');
+
+$CCWay+820;
+;//○□○ 第二内船
+	RollingNoise.Change(0);
+	Repeater['Wall00L'].End();
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+
+$CCWay+820;
+		$dist = distance;
+		//$radius=200;
+		//$cant=35;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+821;
+		$dist = distance;
+		$radius=-240;
+		$cant=-40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+825;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+850;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+900;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+920;
+		$dist = distance;
+		//$radius=-240;
+		//$cant=-40;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+920;
+		$dist = distance;
+		//$slope=-10;
+	include 'utility\GraDownEnd.txt';
+
+$CCWay+925;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+1050;
+		$dist = distance;
+		$slope=25;
+	include 'utility\GraUpStart.txt';
+
+$CCWay+1050;
+		$dist = distance;
+		$radius=-240;
+		$cant=-40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+1111;
+//◎ 小内船踏切　35.111
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$CCWay+1350;
+		$dist = distance;
+		//$radius=-240;
+		//$cant=-40;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+1370;
+		$dist = distance;
+		$radius=200;
+		$cant=50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+1375;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+1400;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+1425;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+1450;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+1660;
+		$dist = distance;
+		//$radius=200;
+		//$cant=50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+1720;
+		$dist = distance;
+		$radius=300;
+		$cant=40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+1800;
+		$dist = distance;
+		//$radius=300;
+		//$cant=40;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+1801;
+		$dist = distance;
+		$radius=-200;
+		$cant=-50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+1825;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+1875;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+1930;
+		$dist = distance;
+		//$radius=-200;
+		//$cant=-50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+1900;
+		$dist = distance;
+		//$slope=25;
+	include 'utility\GraUpEnd.txt';
+
+$CCWay+1990;
+		$dist = distance;
+		$radius=200;
+		$cant=50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+2035;
+;//●□● 第三内船 81
+	RollingNoise.Change(4);
+	Structure['1go_c1_Potal1'].Put(0, 0, -0.3, 0, 0, 0, 0, 1, 1);
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ent');
+	Repeater['Rail00u'].End();
+	Repeater['EnePole00'].End();
+
+$CCWay+2040;
+	Repeater['Wall00L'].Begin(0, 0, -0.3,  0.0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_lp');
+
+$CCWay+2045;
+		$dist = distance;
+		//$radius=-200;
+		//$cant=-50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+2100;
+		$dist = distance;
+		$radius=240;
+		$cant=50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+2110;
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ext');
+
+$CCWay+2115;
+;//○□○ 第三内船
+	RollingNoise.Change(0);
+	Repeater['Wall00L'].End();
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+
+$CCWay+2125;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+2130;
+		$dist = distance;
+		$slope=-15.2;
+	include 'utility\GraDownStart.txt';
+
+$CCWay+2150;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+2175;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+2200;
+		$dist = distance;
+		//$radius=240;
+		//$cant=50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+2200;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+2201;
+		$dist = distance;
+		$radius=-200;
+		$cant=-50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+2225;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+2330;
+;//●□● 第一天狗 110
+	RollingNoise.Change(4);
+	Structure['1go_c1_Potal1'].Put(0, 0, -0.3, 0, 0, 0, 0, 1, 1);
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ent');
+	Repeater['Rail00u'].End();
+	Repeater['EnePole00'].End();
+
+$CCWay+2335;
+	Repeater['Wall00L'].Begin(0, 0, -0.3,  0.0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_lp');
+
+$CCWay+2390;
+		$dist = distance;
+		//$radius=-200;
+		//$cant=-50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+2440;
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ext');
+
+$CCWay+2445;
+;//○□○ 第一天狗
+	RollingNoise.Change(0);
+	Repeater['Wall00L'].End();
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+
+$CCWay+2450;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+2470;
+		$dist = distance;
+		//$slope=-15.2;
+	include 'utility\GraDownEnd.txt';
+
+$CCWay+2470;
+		$dist = distance;
+		$radius=200;
+		$cant=50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+2475;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+2510;
+		$dist = distance;
+		$slope=13.4;
+	include 'utility\GraUpStart.txt';
+
+$CCWay+2540;
+;//●□● 第二天狗 46
+	RollingNoise.Change(4);
+	Structure['1go_c1_Potal1'].Put(0, 0, -0.3, 0, 0, 0, 0, 1, 1);
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ent');
+	Repeater['Rail00u'].End();
+	Repeater['EnePole00'].End();
+
+$CCWay+2545;
+	Repeater['Wall00L'].Begin(0, 0, -0.3,  0.0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_lp');
+
+$CCWay+2580;
+	Repeater['Wall00L'].Begin(0, 0, -0.3, 0, 0, 0, 0, 3, 5.0, 5.0, '1go_c1_ext');
+
+$CCWay+2584;
+		$dist = distance;
+		//$radius=200;
+		//$cant=50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+2585;
+;//○□○ 第一天狗
+	RollingNoise.Change(0);
+	Repeater['Wall00L'].End();
+	Repeater['Rail00u'].Begin(0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+
+$CCWay+2585;
+		$dist = distance;
+		$radius=-200;
+		$cant=-50;
+	include 'utility\CurveStart.txt';
+
+$CCWay+2600;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+2650;
+		$dist = distance;
+		//$radius=-200;
+		//$cant=-50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+2720;
+		$dist = distance;
+		$radius=200;
+		$cant=10;
+	include 'utility\CurveStart.txt';
+
+$CCWay+2725;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+2750;
+		$dist = distance;
+		//$radius=200;
+		//$cant=50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+2800;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+2850;
+		$dist = distance;
+		$radius=400;
+		$cant=25;
+	include 'utility\CurveStart.txt';
+
+$CCWay+2850;
+		$dist = distance;
+		//$slope=13.4;
+	include 'utility\GraUpEnd.txt';
+
+$CCWay+2900;
+		$dist = distance;
+		//$radius=400;
+		//$cant=25;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+2901;
+		$dist = distance;
+		$radius=-300;
+		$cant=-40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+2980;
+		$dist = distance;
+		//$radius=-300;
+		//$cant=-40;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+2981;
+		$dist = distance;
+		$radius=300;
+		$cant=40;
+	include 'utility\CurveStart.txt';
+
+$CCWay+3000;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+3025;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+3060;
+		$dist = distance;
+		//$radius=300;
+		//$cant=40;
+	include 'utility\CurveEnd.txt';
+
+// 被災現場
+$CCWay+3061;
+		$dist = distance;
+		$radius=-300;
+		$cant=-45;
+	include 'utility\CurveStart.txt';
+
+$CCWay+3120;
+		$dist = distance;
+		//$radius=-300;
+		//$cant=-45;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+3121;
+		$dist = distance;
+		$radius=200;
+		$cant=45;
+	include 'utility\CurveStart.txt';
+
+$CCWay+3160;
+		$dist = distance;
+		$slope=25;
+	include 'utility\GraUpStart.txt';
+
+$CCWay+3310;
+		$dist = distance;
+		//$radius=200;
+		//$cant=50;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+3400;
+		$dist = distance;
+		$radius=-200;
+		$cant=-45;
+	include 'utility\CurveStart.txt';
+
+$CCWay+3520;
+		$dist = distance;
+		//$radius=-200;
+		//$cant=-45;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+3520;
+		$dist = distance;
+		//$slope=25;
+	include 'utility\GraUpEnd.txt';
+
+$CCWay+3580;
+		$dist = distance;
+		$radius=-240;
+		$cant=-30;
+	include 'utility\CurveStart.txt';
+
+$CCWay+3620;
+		$dist = distance;
+		$slope=-20;
+	include 'utility\GraDownStart.txt';
+
+$CCWay+3640;
+		$dist = distance;
+		//$radius=-240;
+		//$cant=-30;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+3720;
+		$dist = distance;
+		$radius=200;
+		$cant=45;
+	include 'utility\CurveStart.txt';
+
+$CCWay+3820;
+		$dist = distance;
+		//$radius=200;
+		//$cant=45;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+3821;
+		$dist = distance;
+		$radius=-200;
+		$cant=-45;
+	include 'utility\CurveStart.txt';
+
+$CCWay+3920;
+		$dist = distance;
+		//$slope=-20;
+	include 'utility\GraDownEnd.txt';
+
+$CCWay+3930;
+		$dist = distance;
+		//$radius=-200;
+		//$cant=-45;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+3980;
+		$dist = distance;
+		$radius=-600;
+		$cant=-30;
+	include 'utility\CurveStart.txt';
+
+$CCWay+4100;
+		$dist = distance;
+		//$radius=-600;
+		//$cant=-30;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+4270;
+		$dist = distance;
+		$radius=-400;
+		$cant=-35;
+	include 'utility\CurveStart.txt';
+
+$CCWay+4291;
+//◎ 井戸尻踏切　38.291
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$CCWay+4360;
+		$dist = distance;
+		//$radius=-400;
+		//$cant=-35;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+4380;
+		$dist = distance;
+		$radius=200;
+		$cant=45;
+	include 'utility\CurveStart.txt';
+
+$CCWay+4434;
+//◎ 馬込踏切　38.434
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$CCWay+4440;
+		$dist = distance;
+		$slope=-25;
+	include 'utility\GraDownStart.txt';
+
+$CCWay+4450;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+4475;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+4500;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+4525;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+4575;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+4600;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+4620;
+		$dist = distance;
+		//$radius=200;
+		//$cant=45;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+4621;
+		$dist = distance;
+		$radius=-200;
+		$cant=-45;
+	include 'utility\CurveStart.txt';
+
+$CCWay+4650;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 0, 0, 0, 25.0, 25.0, 'Pole0_2');
+
+$CCWay+4700;
+	Repeater['EnePole00'].Begin(0, 0, 0, 0, 0, 180, 0, 0, 25.0, 25.0, 'Pole0_4');
+
+$CCWay+4740;
+		$dist = distance;
+		$slope2=-6.7;
+	include 'utility\GraDownChange.txt';
+
+$CCWay+4860;
+		$dist = distance;
+		//$radius=-200;
+		//$cant=-45;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+4861;
+		$dist = distance;
+		$radius=240;
+		$cant=45;
+	include 'utility\CurveStart.txt';
+
+$CCWay+4917;
+//◎ 感応寺踏切　38.917
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$CCWay+4967;
+//◎ 北川踏切　38.967
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$CCWay+5050;
+		$dist = distance;
+		//$slope=-6.7;
+	include 'utility\GraDownEnd.txt';
+
+$CCWay+5100;
+		$dist = distance;
+		//$radius=240;
+		//$cant=45;
+	include 'utility\CurveEnd.txt';
+
+$CCWay+5160;
+		$dist = distance;
+		$radius=-400;
+		$cant=-35;
+	include 'utility\CurveStart.txt';
+
+$CCWay+5299;
+//◎ 妙泉寺踏切　39.299
+	Structure['Fumikiri_AL'].Put0(0, 0, 5);
+	Structure['Fumikiri_AR'].Put0(1, 0, 5);
+	Sound3D['Fumikiri'].Put(-2.5, 3.0);
+
+$CCWay+5300;
+		$dist = distance;
+		//$radius=-400;
+		//$cant=-35;
+	include 'utility\CurveEnd.txt';
+
+
+$CCWay+4646;
+;//■■□ 下本場内遠方
+//	Structure['PoleSL1'].Put(0, -2.4, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 25);
+
+$CCWay+5250;
+;//●●○ 下本場内
+//	Section.BeginNew(0, 2, 4);
+//	Structure['PoleSL1'].Put(0, -2.4, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put(0, 0, -2.6, 3.8, 0, 0, 0, 0, 1, 25);
+
+
+
+//--------------------------------------------------------------------------
+
+
+
+// (C)Harupi

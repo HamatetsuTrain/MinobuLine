@@ -1,0 +1,123 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// 48987 - 50065  map_s03/cc18_K1
+// 身延線 波高島(CC18) 場 ～ 下本出
+//////////////////////////////////////////////////////////////////////////
+
+// ※駅中心　49K880
+$Hadakajima + 0;
+	Beacon.Put(80, 1, 49880);
+
+
+$Hadakajima - 893;
+;//●●○ 下本場内
+	Section.BeginNew(0, 2, 4);
+	Structure['PoleSR1'].Put(0, 2.6, -2.0, 0, 0, 0, 0, 1, 1.0);
+	Signal['type3'].Put(0, 0, 2.4, 2.8, 0, 0, 0, 0, 1, 1.0);
+$Hadakajima - 893;
+		$dist = distance;
+		$Section2=1100;
+		$LastBcn=600;
+	include 'utility\Beacon60st.txt';
+		$LastPut=3200;
+		$LastBcn=3996;
+	include 'utility\Beacon60plus.txt';
+
+$Hadakajima - 893;
+	Repeater['EnePole00'].End();
+
+$Hadakajima - 80;
+	Track['10'].Position(0, 0, 162, 0); // 上本
+	Repeater['Rail10L'].Begin('10', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail10R'].Begin('10',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail10u'].Begin('10', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	Repeater['Kasen10'].Begin('10', 0, 0, 0, 0, 0, 0, 1, 25, 25, 'KasenS0');
+	JointNoise.Play(0);
+
+$Hadakajima - 55;
+	Track['10'].Position(1.90, 0, -600, 0); // 上本
+
+$Hadakajima - 50;
+;//●●○ (上本出発)
+	Structure['PoleSL1'].Put('10', 2.8, -1.0, 0, 0, 0, 0, 1, 25);
+//	Signal['type3'].Put('10', 0, 3.0, 3.8, 0, 0, 0, 0, 1, 25);
+
+$Hadakajima - 40;
+	Track['11'].Position(0, 0, -162, 0); // 下１
+	Repeater['Rail11L'].Begin('11', -0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailL0', 'RailL1', 'RailL2', 'RailL3', 'RailL4');
+	Repeater['Rail11R'].Begin('11',  0.5335, 0, 0, 0, 0, 0, 3, 5.0, 5.0, 'RailR0', 'RailR1', 'RailR2', 'RailR3', 'RailR4');
+	Repeater['Rail11u'].Begin('11', 0, 0, 0, 0, 0, 0, 3, 5, 5, 'Ballast0', 'Ballast1', 'Ballast2', 'Ballast3', 'Ballast4');
+	JointNoise.Play(0);
+
+$Hadakajima - 15;
+	Track['11'].Position(-1.9, 0, 162, 0); // 下１
+
+$Hadakajima - 5;
+	Track['10'].Position(8.55, 0, 329, 0); // 上本
+
+$Hadakajima + 10;
+	Track['11'].Position(-3.80, 0, 0, 0); // 下１
+
+$Hadakajima + 15;
+	Track['10'].Position(9.50, 0, 0, 0); // 上本
+
+//▼▼▼ 波高島 (CC18)
+$Hadakajima + 20;
+	Repeater['Form00S'].Begin0(0, 1, 5.0, 5.0, 'FormR2');
+	Repeater['Form10S'].Begin0('10', 1, 5.0, 5.0, 'FormL2');
+	Repeater['Form00C'].Begin0(0, 1, 5.0, 5.0, 'FormCR2');
+	Repeater['Form10C'].Begin0('10', 1, 5.0, 5.0, 'FormCL2');
+
+
+$Hadakajima + 110;
+	Repeater['Form00S'].End();
+	Repeater['Form10S'].End();
+	Repeater['Form00C'].End();
+	Repeater['Form10C'].End();
+//▲▲▲ 波高島 (CC18)
+
+$Hadakajima +110;
+	Track['10'].Position(8.55, 0, 0, 0); // 上本
+
+$Hadakajima +115;
+	Track['11'].Position(-3.80, 0, 0, 0); // 下１
+	Repeater['Rail11L'].End();
+	Repeater['Rail11R'].End();
+	Repeater['Rail11u'].End();
+
+$Hadakajima +135;
+	Curve.Begin(162);
+	Track['10'].Position(6.65, 0, -162, 0); // 上本
+
+$Hadakajima +150;
+;//●●○ 下本出発
+	Section.BeginNew(0, 2, 4);
+	Structure['PoleSL1'].Put(0, -2.2, -1.0, 0, 0, 0, 0, 1, 1.0);
+	Signal['type3'].Put(0, 0, -2.0, 3.8, 0, 0, 0, 0, 1, 1.0);
+$Hadakajima +150;
+		$dist = distance;
+		$Section2=337;
+		$LastBcn=180;
+	include 'utility\Beacon60st.txt';
+
+$Hadakajima +160;
+	Curve.Begin(-162);
+	Track['10'].Position(2.85, 0, 110, 0); // 上本
+
+$Hadakajima +185;
+	Curve.Begin(329);
+	Track['10'].Position(0, 0, 0, 0); // 上本
+	Repeater['Rail10L'].End();
+	Repeater['Rail10R'].End();
+	Repeater['Rail10u'].End();
+	Repeater['Kasen10'].End();
+
+
+
+
+//--------------------------------------------------------------------------
+
+
+
+// (C)Harupi

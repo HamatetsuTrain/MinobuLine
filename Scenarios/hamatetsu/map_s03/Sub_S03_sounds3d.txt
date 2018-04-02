@@ -1,0 +1,3 @@
+BveTs Sound List 2.00
+
+Fumikiri	, ..\..\Nagoya_Common\Sound\3D\Crossing.wav

@@ -1,0 +1,35 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// utility/Beacon70
+// ATS-PT P/L地上子 (速度制限)
+//////////////////////////////////////////////////////////////////////////
+
+// 引数 //////
+// ($location : 制限開始点[m])
+// $limStr : 地上子設置点～制限区間までの距離[m]
+// $limLen : 制限区間長[m]
+// $limSpd : 制限速度[km/h]
+/////////////
+
+//$location = distance;
+$location = $dist;
+
+
+$Option = floor($limSpd / 5) * 1000000 + floor($limStr / 4) * 1000 + floor($limLen / 4);
+
+$location - $limStr - 4;
+	Beacon.Put(70, 1, $Option);
+	Structure['Beacon_p'].Put(0, 0, 0, 0, 0, 0, 0, 3, 0);
+
+$location - $limStr;
+	Beacon.Put(70, 1, $Option);
+	Structure['Beacon_p'].Put(0, 0, 0, 0, 0, 0, 0, 3, 0);
+
+$location + 0;
+	SpeedLimit.Begin($limSpd);
+
+$location + $limLen;
+	SpeedLimit.End();
+
+////////////////////////////////////////////////////////////////

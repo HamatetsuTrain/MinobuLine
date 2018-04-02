@@ -1,0 +1,27 @@
+﻿BveTs Map 2.00
+
+//////////////////////////////////////////////////////////////////////////
+// utility/GraDownChange
+// 勾配減少変化 x3.0
+//////////////////////////////////////////////////////////////////////////
+
+// 引数 //////
+// ($location : 勾配変化中心点[m])
+// ($slope : 勾配[‰])
+// $slope2 : 変化後勾配[‰]
+/////////////
+
+//$location = distance;
+$location = $dist;
+
+$location - abs($slope - $slope2) * 1.5;
+	Gradient.BeginTransition();
+
+$location + 0;
+	Structure['Gp_UD'].Put(0, -2.2, 0, 0, 0, 0, 0, 1, 1);
+
+$location + abs($slope - $slope2) * 1.5;
+	Gradient.BeginConst($slope2);
+
+$slope = $slope2;
+////////////////////////////////////////////////////////////////
